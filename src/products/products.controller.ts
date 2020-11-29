@@ -33,8 +33,8 @@ export class ProductsController {
   @Post()
   @HttpCode(HttpStatus.CREATED)
   @Header('Content-Type', 'application/json')
-  create(@Body() product: CreateProductDto): Promise<Product> {
-    return this.productsService.create(product);
+  create(@Body() productDto: CreateProductDto): Promise<Product> {
+    return this.productsService.create(productDto);
   }
 
   @Delete(':id')
